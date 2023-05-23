@@ -41,6 +41,6 @@ export async function userLiked(videoId, userId) {
 
         return data.data;
     } catch (error) {
-        return [];
+        return false;
     }
 }
