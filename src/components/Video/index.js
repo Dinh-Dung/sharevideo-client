@@ -50,7 +50,7 @@ const VideoPlayer = ({ video }) => {
     useEffect(() => {
         (async () => {
             if (user) {
-                const liked = await userLiked(video.user.id, user.id);
+                const liked = await userLiked(video?.user.id, user?.id);
                 setLikeActive(liked);
 
                 const followed = await checkUserFollowed(user.id, video.user.id);
