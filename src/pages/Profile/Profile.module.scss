@@ -1,0 +1,209 @@
+.wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 32px 24px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    box-sizing: content-box;
+    // min-height: calc(100vh - 59px);
+}
+.share-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-avatar {
+    position: relative;
+    display: flex;
+}
+.span-avatar-user {
+    width: 116px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-feature-settings: 'tnum';
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;
+    border-radius: 50%;
+    background-color: rgba(136, 136, 136, 0.5);
+    border-color: rgba(22, 24, 35, 0.12);
+    border-width: 0.5px;
+    cursor: pointer;
+    font-size: 56px;
+}
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.counts-info {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    color: rgba(18, 18, 18, 0.75);
+}
+.number-following {
+    margin-right: 20px;
+}
+
+.user-title {
+    flex: 1 1 0%;
+    cursor: pointer;
+    overflow: visible;
+    margin-left: 20px;
+}
+.nickname-user {
+    font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-break: break-word;
+}
+.user-name {
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow: hidden;
+    max-width: 450px;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
+}
+.edit-profile {
+    width: 148px;
+    margin: 16px 0px 0px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.counts-info {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    color: rgba(18, 18, 18, 0.75);
+    span {
+        color: rgba(22, 24, 35, 0.75);
+        font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        display: inline-block;
+        margin-left: 6px;
+    }
+    strong {
+        color: rgb(22, 24, 35);
+        font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        direction: ltr;
+    }
+}
+.number-following {
+    margin-right: 20px;
+}
+.number-follower {
+    margin-right: 20px;
+}
+.user-bio {
+    text-align: left;
+    color: rgb(22, 24, 35);
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    white-space: pre-line;
+    margin-top: 10px;
+}
+.layout-main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 490px;
+    align-items: flex-start;
+    min-width: 100%;
+    position: relative;
+}
+.tab {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    height: 44px;
+    margin-bottom: 8px;
+}
+p.videos-tab,
+p.public-tab {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.videos-tab,
+.public-tab {
+    font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 44px;
+    width: 230px;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(22, 24, 35);
+}
+.video-column {
+    max-width: 100%;
+}
+.user_video-list {
+    display: grid;
+    grid-gap: 28px 0px;
+    grid-template-columns: repeat(4, 276px);
+}
+.content-video {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.video {
+    position: relative;
+    box-sizing: border-box;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        &::placeholder {
+            object-fit: contain;
+            background-color: #f1f1f1;
+        }
+        &:not(:placeholder-shown) {
+            object-fit: cover;
+        }
+    }
+}

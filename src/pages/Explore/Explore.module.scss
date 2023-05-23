@@ -1,0 +1,45 @@
+.wrapper {
+    padding: 46px 32px 32px;
+}
+
+.category-list {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #dcdcdc;
+    h2 {
+        font-size: 24px;
+        display: inline-block;
+        line-height: 28px;
+    }
+}
+.explore-item_container {
+    width: 100%;
+}
+.explore-item-list {
+    display: grid;
+    grid-gap: 28px 0px;
+    grid-template-columns: repeat(4, 276px);
+}
+.video {
+    position: relative;
+    box-sizing: border-box;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        &::placeholder {
+            object-fit: contain;
+            background-color: #f1f1f1;
+        }
+        &:not(:placeholder-shown) {
+            object-fit: cover;
+        }
+    }
+}

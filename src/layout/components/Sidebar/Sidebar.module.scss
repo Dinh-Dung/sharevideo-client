@@ -1,0 +1,13 @@
+.wrapper {
+    width: 356px;
+    padding: 20px 0 26px 8px;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+.wrapper:hover{
+
+}
