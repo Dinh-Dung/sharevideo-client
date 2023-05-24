@@ -14,7 +14,7 @@ import { getProfileAndVideoByNickname } from '~/utils/user-api';
 import { likeCountOfVideo } from '~/utils/like-api';
 import { getUserFollowers } from '~/utils/user-api';
 import { getFollowerOfUser } from '~/utils/follow-api';
-import { getPrivateVideos } from '~/utils/video-api';
+import { getPrivateVideos, getPublicVideos } from '~/utils/video-api';
 import VideoUser from './VideoUser';
 import PrivateUser from './PrivateUser';
 const cx = classNames.bind(styles);
@@ -27,6 +27,7 @@ const Profile = () => {
     const [followingAcounts, setFollowingAcounts] = useState(0);
     const [followerAcount, setFollowerAcount] = useState(0);
     const [privateVideos, setPrivateVideos] = useState([]);
+    const [publicVideos, setPublicVideos] = useState([]);
     const [videoState, setVideoState] = useState('Videos');
 
     const nickname = searchParams.get(`nickname`);
@@ -60,8 +61,12 @@ const Profile = () => {
 
                 const getFollowerUser = await getFollowerOfUser(userProfile?.id);
                 setFollowerAcount(getFollowerUser);
+
                 const videoPrivate = await getPrivateVideos(userProfile?.id);
                 setPrivateVideos(videoPrivate);
+
+                const videoPublic = await getPublicVideos(userProfile?.id);
+                setPublicVideos(videoPublic);
             }
         })();
     }, [user, userProfile, userProfile?.id]);
@@ -130,7 +135,7 @@ const Profile = () => {
                 <div className={cx('video-column')}>
                     {videoState === 'Videos' ? (
                         <div className={cx('user_video-list')}>
-                            {videoUserList.map((video, id) => (
+                            {publicVideos.map((video, id) => (
                                 <VideoUser video={video} key={`video_id${id}`} />
                             ))}
                         </div>

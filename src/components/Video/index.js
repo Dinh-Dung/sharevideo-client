@@ -52,7 +52,6 @@ const VideoPlayer = ({ video }) => {
             if (user) {
                 const liked = await userLiked(video?.id, user?.id);
                 setLikeActive(liked);
-                console.log(liked);
 
                 const followed = await checkUserFollowed(user?.id, video?.user?.id);
                 setFollowActive(followed);

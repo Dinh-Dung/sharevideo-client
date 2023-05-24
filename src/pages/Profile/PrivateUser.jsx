@@ -16,12 +16,12 @@ const VideoUser = ({ video }) => {
     };
     // console.log(video);
     return (
-        <div className={cx('content-video')} onClick={() => handleClickComment(video.id)}>
-            {video.user.nickname === user.nickname ? (
+        <div className={cx('content-video')} onClick={() => handleClickComment(video?.id)}>
+            {video?.user.nickname === user?.nickname ? (
                 <div className={cx('video')}>
                     <video
                         controlsList="nofullscreen"
-                        src={video.url}
+                        src={video?.url}
                         controls
                         style={{ width: '256px', height: '456px' }}
                     ></video>

@@ -16,21 +16,15 @@ const VideoUser = ({ video }) => {
     };
 
     return (
-        <div className={cx('content-video')} onClick={() => handleClickComment(video.id)}>
-            {/* {video.status === 'public' ? ( */}
+        <div className={cx('content-video')} onClick={() => handleClickComment(video?.id)}>
             <div className={cx('video')}>
                 <video
                     controlsList="nofullscreen"
-                    src={video.url}
+                    src={video?.url}
                     controls
                     style={{ width: '256px', height: '456px' }}
                 ></video>
             </div>
-            {/* ) : (
-                <>
-                    <h1>null</h1>
-                </>
-            )} */}
         </div>
     );
 };

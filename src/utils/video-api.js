@@ -33,6 +33,18 @@ export async function getPrivateVideos(id) {
         return [];
     }
 }
+export async function getPublicVideos(id) {
+    try {
+        const { data, error } = await axios.get(`http://localhost:8080/video/getPublicVideos/${id}`);
+
+        if (!data || error) throw new Error();
+
+        return data.data;
+    } catch (error) {
+        return [];
+    }
+}
+
 export async function getVideoFollower(id) {
     try {
         const { data, error } = await axios.get(`${BASE_URL}/video/getVideoFollower/${id}`);

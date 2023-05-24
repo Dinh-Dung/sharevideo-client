@@ -36,7 +36,7 @@ const AccountItem = () => {
     };
     const handleClickProfile = (user) => {
         if (user) {
-            navigate(`/profile?nickname=${user.user_nickname}`);
+            navigate(`/profile?nickname=${user}`);
         }
     };
     return (
@@ -51,7 +51,7 @@ const AccountItem = () => {
                     key={id}
                 >
                     {/* {user ? ( */}
-                    <div className={cx('account-item')} onClick={() => handleClickProfile(user1)}>
+                    <div className={cx('account-item')} onClick={() => handleClickProfile(user1.user_nickname)}>
                         <Link className={cx('browse-user-avatar')}>
                             <div className={cx('user-avatar')} style={{ width: '56px', height: '56px' }}>
                                 <span>{user1.user_fullname[0]}</span>
