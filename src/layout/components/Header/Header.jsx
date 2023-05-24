@@ -94,24 +94,9 @@ const Header = () => {
                                     </button>
                                 </Link>
                             </Tippy>
-                            {/* <Tippy delay={[0, 50]} content="Message" placement="bottom">
-                                <button className={cx('action-btn')}>
-                                    <MessageIcon />
-                                </button>
-                            </Tippy>
-                            <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
-                                <button className={cx('action-btn')}>
-                                    <span className={cx('bagdge')}>12</span>
-                                    <InboxIcon />
-                                </button>
-                            </Tippy> */}
                         </>
                     ) : (
-                        <>
-                            <Link>
-                                <AuthModal />
-                            </Link>
-                        </>
+                        <AuthModal />
                     )}
 
                     {user ? (
