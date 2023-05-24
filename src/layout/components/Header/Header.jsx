@@ -69,17 +69,6 @@ const Header = () => {
             onClick: () => navigate(`/profile?nickname=${user.nickname}`),
         },
         {
-            icon: <FontAwesomeIcon icon={faCoins} />,
-            title: 'Get coins',
-            onClick: () => navigate('/coin'),
-        },
-        {
-            icon: <FontAwesomeIcon icon={faGear} />,
-            title: 'Settings',
-            onClick: () => navigate('/settings'),
-        },
-        ...MENU_ITEMS,
-        {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
             separate: true,
